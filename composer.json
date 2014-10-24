@@ -1,0 +1,15 @@
+{
+    "name": "xenursxx/php_a2_gr1_twig",
+    "description": "WTF?",
+    "require": {
+        "twig/twig": "~1.16"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "guillaume",
+            "email": "gui.nouhaud@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
