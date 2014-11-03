@@ -6,7 +6,3 @@
 
 require __DIR__.'/_header.php';
 
-if (!isConnected()) {
-    header('Location: ../login.php');
-    die('Forbidden Area');
-}

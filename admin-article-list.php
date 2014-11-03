@@ -10,9 +10,9 @@ require __DIR__.'/_header-admin.php';
 echo $twig->render('admin-article-list.html.twig', [
 
 
-    $articles = getArticles($link);
-$excer = getExcerpt($article['title'], 30);
-$ercercont = getExcerpt($article['content'], 100);
+    $articles = getArticles($link),
+$excer = getExcerpt($article['title'], 30),
+$ercercont = getExcerpt($article['content'], 100),
 
 ]);
 

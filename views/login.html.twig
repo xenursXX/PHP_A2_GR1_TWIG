@@ -2,14 +2,14 @@
 
 {% block content %}
     <h1>Login</h1>
-{% if missing_credential is defined %}
+{% if missing_credential is not empty %}
     <div class="alert alert-danger fade in" role="alert">
         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
         <strong>Warning!</strong> At least one field is empty, please enter a <i>username</i> AND a <i>password</i>.
     </div>
 
     {% endif %}
-    {% if credential_error is defined %}
+    {% if credential_error is not empty %}
         <div class="alert alert-warning fade in" role="alert">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             <strong>Error!</strong> Credentials are not correct, please enter a new <i>password</i> or change <i>username</i>.
