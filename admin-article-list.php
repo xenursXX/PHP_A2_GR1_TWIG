@@ -6,8 +6,14 @@
 
 require __DIR__.'/_header-admin.php';
 
-$articles = getArticles($link);
 
-include __DIR__.'/template/admin-article-list.php';
+echo $twig->render('admin-article-list.html.twig', [
+
+
+    $articles = getArticles($link);
+$excer = getExcerpt($article['title'], 30);
+$ercercont = getExcerpt($article['content'], 100);
+
+]);
 
 require __DIR__.'/_footer.php';

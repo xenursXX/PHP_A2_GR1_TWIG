@@ -33,10 +33,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/" <?php  if(isset($homeActive)) { echo 'class="active"'; } ?>>Home</a></li>
-                <li><a href="/categories.php">Categories</a></li>
-                <li><a href="/tags.php">Tags</a></li>
-                <li><a href="/contact.php">Contact</a></li>
+                <li><a href="" <?php  if(isset($homeActive)) { echo 'class="active"'; } ?>>Home</a></li>
+                <li><a href="categories.php">Categories</a></li>
+                <li><a href="tags.php">Tags</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <?php if (true === isConnected()) { ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <span class="caret"></span></a>
@@ -47,16 +47,16 @@
                         <li class="divider"></li>
                         <?php if (true === isAdmin()) { ?>
                         <li class="dropdown-header">Categories</li>
-                        <li><a href="/admin-category-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Categories</a></li>
-                        <li><a href="/admin-category-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Category</a></li>
+                        <li><a href="admin-category-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Categories</a></li>
+                        <li><a href="admin-category-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Category</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Tags</li>
-                        <li><a href="/admin-tag-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Tags</a></li>
-                        <li><a href="/admin-tag-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Tag</a></li>
+                        <li><a href="admin-tag-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Tags</a></li>
+                        <li><a href="admin-tag-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Tag</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Users</li>
-                        <li><a href="/admin-user-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Users</a></li>
-                        <li><a href="/admin-user-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add User</a></li>
+                        <li><a href="admin-user-list.php"><span class="glyphicon glyphicon-list-alt"></span> List Users</a></li>
+                        <li><a href="admin-user-add.php"><span class="glyphicon glyphicon-plus-sign"></span> Add User</a></li>
                         <?php } ?>
                     </ul>
                 </li>
@@ -65,12 +65,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <?php if (true === isConnected()) { ?>
                 <li><a href="#">Welcome <?php echo getSession()['username']; ?>!</a></li>
-                <li><a href="/logout.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
                 <?php } else { ?>
-                <li><a href="/login.php">Login</a></li>
+                <li><a href="login.php">Login</a></li>
                 <?php } ?>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div><!--/.nav-collapse --
     </div>
 </div>
 

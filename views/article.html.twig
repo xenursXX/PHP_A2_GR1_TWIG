@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+
+    {% for article in articles %}
+        <article class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <h1><a href="article.php?id={{ article.id }}">{{ article.title }}</a></h1>
+        <img src="{{'uploads/article/img.jpg' }}" alt="" />
+        <small>written by {{ article.user_id }}  on {{ article.created_at }}</small>
+        <p>{{  article.content }}</p>
+        <p> posted in category: <a href="{{ article.category_id }}"> {{ article.category_id }}</a></p>
+        <p><a href="tag?id={{ article.category_id }} "<span class="label label-primary">Primary</span></p>
+
+        </article>
+
+
+
+
+
+    {% endfor %}
+    </div>
+
+{% endblock %}
+
+
+

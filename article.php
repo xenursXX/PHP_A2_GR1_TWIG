@@ -15,7 +15,31 @@ if (!empty($_GET['id'])) {
 } else {
     header('Location: index.php');
 }
+try{
+    $pdo = new PDO('mysql:host=localhost;dbname=modulephp','root','');
+} catch(PDOException $e) {
+    @mail('gui.nouhaud@gmail.com', 'BDD Error', $e->getMessage());
+    throw new PDOException('BDD Error');
+
+
+}
+$sql = 'SELECT * FROM article';
+$pdoStmt = $pdo->query($sql);
+$articles = $pdoStmt->fetchAll(PDO::FETCH_OBJ);
+
+
+
+
+
+
+
+echo $twig->render('articles.html.twig', [
+    'article' => $article,
+
+
+
+]);
 
 require __DIR__.'/_footer.php';
 
-include __DIR__.'/template/article.php';
+
