@@ -5,14 +5,13 @@
  */
 
 require __DIR__.'/_header-admin.php';
-$excer='';
-$ercercont='';
+
 echo $twig->render('admin-article-list.html.twig', [
 
 
     $articles = getArticles($link),
 
-'articles' => $articles,
+    'articles' => $articles,
 ]);
 
 require __DIR__.'/_footer.php';
